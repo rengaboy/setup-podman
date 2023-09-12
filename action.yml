@@ -1,0 +1,25 @@
+name: 'Setup Podman'
+description: 'Setup podman and buildah binaries'
+inputs:
+  podman:
+    description: 'podman version'
+    required: false
+    default: '4.1.1'
+  buildah:
+    description: 'buildah version'
+    required: false
+    default: '1.26.2'
+  arch:
+    description: 'architecture'
+    required: false
+    default: 'amd64'
+outputs:
+  podman:
+    description: 'podman version'
+  buildah:
+    description: 'buildah version'
+  arch:
+    description: 'architecture'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
